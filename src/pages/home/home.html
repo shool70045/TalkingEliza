@@ -1,14 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Talking Eliza
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <img height="100%" [src]="imageSrc"/>
+  <!-- <div id="avatar-avatar-video-div" style="display: inline-block; width: 300px; height: 360px; background-size: 300px 360px; background-repeat: no-repeat; background-image: url(&quot;https://www.botlibre.com/media/a12546662.png&quot;); position: fixed; opacity: 0; z-index: -1;">
+    <video muted="true" id="avatar-avatar-video" autoplay="" preload="auto" style="background:transparent;width:300px;height:360px;"
+      src="https://www.botlibre.com/media/a12540387.webm" loop="">Video format not supported by your browser (try Chrome)</video>
+  </div>
+  <div id="avatar-avatar-canvas-div" style="display: inline-block; width: 300px; height: 360px;"><canvas id="avatar-avatar-canvas" style="background:transparent;width:300px;height:360px;" height="360">Canvas not supported by your browser (try Chrome)</canvas></div> -->
 </ion-content>
+<ion-footer no-shadow>
+  <ion-toolbar position="bottom" text-center>
+    <button class="round-button" (click)="buttonClicked()" ion-button color="default">
+      <ion-icon [ngClass]="(isListening==true)?'red':'white'" name="mic"></ion-icon>
+    </button>
+  </ion-toolbar>
+</ion-footer>
