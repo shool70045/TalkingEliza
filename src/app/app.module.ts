@@ -9,7 +9,6 @@ import { HomePage } from '../pages/home/home';
 //
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
-import { HTTP } from '@ionic-native/http';
 
 @NgModule({
   declarations: [
@@ -30,8 +29,7 @@ import { HTTP } from '@ionic-native/http';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SpeechRecognition,
-    TextToSpeech,
-    HTTP
+    TextToSpeech
   ]
 })
 export class AppModule {}
